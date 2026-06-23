@@ -14,21 +14,21 @@
         </div>
 
         <div class="card">
-             <form action="/generate"  method="post">
+             <form id="question-form" action="/generate" method="post">
                 <div class="field">
                     <label for="subject">Subject</label>
-                    <input id="subject" type="text" placeholder="Enter Subject e.g, Mathematics, Science etc.">
+                    <input id="subject" name="subject" type="text" placeholder="Enter Subject e.g, Mathematics, Science etc." required>
                 </div>
 
                 <div class="field">
                     <label for="topic">Topic</label>
-                    <input id="topic" type="text" placeholder="Enter Topic E.g, World War II, Photosynthesis etc.">
+                    <input id="topic" name="topic" type="text" placeholder="Enter Topic E.g, World War II, Photosynthesis etc." required>
                 </div>
 
                 <div class="field">
                     <label for="count">Number of Questions</label>
-                    <input id="count" type="number">
-                </div> 
+                    <input id="count" name="count" type="number" min="1" required>
+                </div>
 
                 <button type="submit">Generate Questions</button>
              </form>
@@ -38,5 +38,13 @@
             </div>
             </div>
     </div>
+
+    <script>
+        document.getElementById('question-form')?.addEventListener('submit', function (event) {
+            const form = event.currentTarget;
+            const currentOrigin = window.location.origin;
+            form.action = currentOrigin + '/generate';
+        });
+    </script>
 </body>
 </html>
