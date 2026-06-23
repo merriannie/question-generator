@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generator</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Question Generator</h1>
+            <p>Enter a subject and topic to get custom answers for you</p>
+        </div>
+
+        <div class="card">
+             <form action="/generate"  method="post">
+                <div class="field">
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" placeholder="Enter Subject e.g, Mathematics, Science etc.">
+                </div>
+
+                <div class="field">
+                    <label for="topic">Topic</label>
+                    <input id="topic" type="text" placeholder="Enter Topic E.g, World War II, Photosynthesis etc.">
+                </div>
+
+                <div class="field">
+                    <label for="count">Number of Questions</label>
+                    <input id="count" type="number">
+                </div> 
+
+                <button type="submit">Generate Questions</button>
+             </form>
+
+            <div class="results">
+                {{RESULTS}}
+            </div>
+            </div>
+    </div>
+</body>
+</html>
