@@ -1,32 +1,45 @@
-# 🤖 Question Generator 🚀
+# Question Generator
 
-Ever wanted to create your own super-powered quiz? This app lets you pick a subject and a topic, and then it finds cool questions for you!
+## Project Overview
 
-## 🛠️ Quick Start
+This is a basic web app built in Python using FastAPI for the backend and a basic HTML and CSS frontend. It is designed to be a simple learning project, but it is still functional.
 
-1.  **Open your terminal** and enter the folder.
-2.  **Turn on your Python environment**:
-    *   Linux/Mac: `source .venv/bin/activate`
-    *   Windows: `.venv\Scripts\activate`
-3.  **Install the magic tools** (only the first time):
-    ```bash
-    pip install fastapi uvicorn requests
-    ```
-4.  **Launch the app**:
-    ```bash
-    uvicorn main:app --reload --port 3003
-    ```
-5.  **Open your browser** and go to: `http://localhost:3003`
+My name is Mercy Yaa Nyarko and I created this project as part of my learning journey in web development using html and css and python.
 
-## 🎮 How to Play
+## Steps / Approach
 
-1.  **Subject**: Type something like "Science" or "History".
-2.  **Topic**: Type something specific like "Space" or "Dinosaurs".
-3.  **Count**: Pick how many questions you want.
-4.  **Click "Generate"** and watch the magic happen! ✨
+1. A basic form where the user inputs a subject, topic, and number of questions
+2. Upon submission, the data is sent to the backend
+3. The backend receives this info and attempts to retrieve questions from an external question service
+4. If the service is up and running, the generated questions are displayed on the page
+5. If the service is down, the app uses some built-in fallback questions so that the app does not break
+6. The results are displayed in an organized, simple layout on the webpage.
 
-## 📂 What's inside?
-- `main.py`: The "brain" of our app.
-- `static/index.html`: The "face" of our app that you see in the browser.
+## Future Improvements
 
-Built with ❤️ by Startocode.
+There are a somethings I would like to improve in the future. This includes:
+
+- Making the design look nicer and modern .
+- Add better error messages when the external service is unavailable.
+- Let users choose different difficulty levels for the questions.
+- Save generated questions so users can view them later.
+- Add more features to make the app feel more complete.
+
+## How to Run
+
+1. Open the project folder in the terminal.
+2. Run the app with:
+
+```bash
+.\.venv\Scripts\python.exe main.py
+```
+
+3. Open your browser and go to:
+
+```text
+http://127.0.0.1:3003/
+```
+
+## Notes
+
+This project is a basic but good example of how a simple web app can work. I am still learning and I hope I can improve it more in the future.
